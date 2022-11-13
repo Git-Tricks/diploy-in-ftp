@@ -1,0 +1,37 @@
+# readmore : https://github.com/SamKirkland/FTP-Deploy-Action
+
+name: 🪐 FTP-DEPLOY
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  web-deploy:
+    name: 🪐 FTP-Deploy
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: 🔍 Get latest code
+        uses: actions/checkout@v2
+
+      - name: 📂 Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
+        with:
+          server: ${{secrets.FTP_SERVER}}
+          username: ${{secrets.FTP_USER}}
+          password: ${{secrets.FTP_PASSWORD}}
+          protocol: ftps
+          port: 21
+          dangerous-clean-slate: false
+          exclude: |
+            - *.git
+            - *.github
+            - *.gitignore
+            - *.txt
+            - *.ftp*
+            - *.vscode
+            - */.github/*
+            - */.bkps/*
+            - */.trash/*
+            - */uploads/*
