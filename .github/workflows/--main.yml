@@ -1,3 +1,4 @@
+# remove "--" from filename for run file
 # readmore : https://github.com/SamKirkland/FTP-Deploy-Action
 
 name: 🪐 FTP-DEPLOY
