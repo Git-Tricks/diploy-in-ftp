@@ -2,7 +2,7 @@
 
 Demo file for deplay/update via ftp a web space from github
 
-[go to: action file](https://github.com/Git-Tricks/diploy-in-ftp/blob/main/.github/workflows/main.yml)<br>
+[go to: action file](https://github.com/Git-Tricks/diploy-in-ftp/blob/main/.github/workflows/--main.yml)<br>
 [go to: action reference](https://github.com/SamKirkland/FTP-Deploy-Action)
 
 
